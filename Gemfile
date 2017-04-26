@@ -36,8 +36,7 @@ gem 'fog'
 gem 'carrierwave', '~> 1.0'
 gem 'pry'
 gem "mini_magick"
-gem 'rails_serve_static_assets'
-gem 'rails_stdout_logging'
+gem 'rails_12factor', group: :production
 
 
 source 'https://rails-assets.org' do
