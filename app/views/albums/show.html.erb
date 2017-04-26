@@ -58,7 +58,7 @@
         <div id="works-grid" class="works-grid works-grid-gutter work-grid-3">
 
           <!-- PORTFOLIO ITEM -->
-          <% @album.photos.each do |photo| %>
+          <!--<% @album.photos.each do |photo| %>
             <article class="work-item travel video">
               <div class="work-wrapper">
                 <div class="work-thumbnail">
@@ -69,8 +69,31 @@
                 </div>
               </div>
             </article>
-          <% end %>
+          <% end %>-->
           <!-- /PORTFOLIO ITEM -->
+          
+          <div class="works-grid-wrapper">
+          
+          <div class="gallery">
+
+            <div class="row">
+
+              <% @album.photos.each do |photo| %>
+                <div class="col-sm-4 gallery-item work-item">
+                  <div class="gallery-icon work-wrapper">
+                    <a href="<%= photo.image_url %>" title="<%= photo.caption %>">
+                      <img src="<%= photo.image_url %>" alt="">
+                    </a>
+                  </div>
+                  <div class="gallery-caption font-alt"><%= photo.caption %></div>
+                </div>
+              <% end %>
+
+            </div>
+
+          </div>
+          
+        </div>
 
         </div>
       </div>

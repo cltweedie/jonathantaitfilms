@@ -47,10 +47,12 @@
                 <div class="work-thumbnail">
                   <img src="<%= photo.image_url %>" alt="">
                 </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">View Album</h3>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
+                <% if photo.album %>
+                  <div class="work-caption">
+                    <h3 class="work-title font-alt">View Gallery</h3>
+                  </div>
+                  <a href="<%= album_path(photo.album) %>" class="work-link"></a>
+                <% end %>
               </div>
             </article>
           <% end %>
