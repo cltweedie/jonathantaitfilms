@@ -1,0 +1,81 @@
+<!-- WRAPPER -->
+<div class="wrapper">
+
+  <!-- HERO -->
+  <section id="hero" class="module-hero bg-dark-30" data-background="<%= @album.photos.first.image_url %>">
+
+    <!-- HERO TEXT -->
+    <div class="hero-caption">
+      <div class="hero-text">
+        <h1 class="hero-title font-alt"><%= @album.title %></h1>
+      </div>
+    </div>
+    <!-- /HERO TEXT -->
+
+  </section>
+  <!-- /HERO -->
+
+  <!-- PORTFOLIO SINGLE -->
+  <section class="module">
+    <div class="container-fluid container-custom">
+
+      <div class="row">
+
+        <div class="col-sm-8 col-sm-offset-2">
+
+          <!-- PORTFOLIO CONTENT -->
+          <article class="portfolio-post post">
+
+            <p><%= @album.description %></p>
+
+            <!-- <div class="owl-carousel slider">
+              <% @album.photos.each do |photo| %>
+                <div class="item">
+                  <img src="<%= photo.image_url %>" alt="">
+                </div>
+              <% end %>
+            </div> -->
+
+          </article>
+          <!-- /PORTFOLIO CONTENT -->
+
+        </div><!-- .col-* -->
+
+      </div>
+
+    </div>
+  </section>
+  <!-- PORTFOLIO SINGLE -->
+
+  <!-- RELATED WORKS -->
+  <section class="module bg-gray" style="padding-top: 0;">
+
+    <div class="container-fluid">
+
+      <!-- WORKS GRID -->
+      <div class="works-grid-wrapper">
+
+        <div id="works-grid" class="works-grid works-grid-gutter work-grid-3">
+
+          <!-- PORTFOLIO ITEM -->
+          <% @album.photos.each do |photo| %>
+            <article class="work-item travel video">
+              <div class="work-wrapper">
+                <div class="work-thumbnail">
+                  <img src="<%= photo.image_url %>" alt="">
+                </div>
+                <div class="work-caption">
+                  <span class="work-category font-serif"><a href="#"><%= photo.caption %></a></span>
+                </div>
+              </div>
+            </article>
+          <% end %>
+          <!-- /PORTFOLIO ITEM -->
+
+        </div>
+      </div>
+      <!-- /WORKS GRID -->
+
+    </div>
+
+  </section>

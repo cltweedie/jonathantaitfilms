@@ -7,4 +7,6 @@ Rails.application.routes.draw do
       resources :photos
     end
   end
+  
+  resources :albums
 end

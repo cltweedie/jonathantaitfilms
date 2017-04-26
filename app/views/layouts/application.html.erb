@@ -9,28 +9,28 @@
   <title>Jonathan Tait | Photography &amp; Film</title>
   
   <!-- Favicons -->
-  <link rel="shortcut icon" href="assets/theme/favicon.png">
-  <link rel="apple-touch-icon" href="assets/theme/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/theme/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/theme/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="/assets/theme/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/theme/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/theme/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/theme/apple-touch-icon-114x114.png">
   
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,400italic,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
   
   <!-- Bootstrap core CSS -->
-  <link href="assets/theme/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/theme/bootstrap.min.css" rel="stylesheet">
 
-  <link href="assets/theme/et-line-font.min.css" rel="stylesheet">
+  <link href="/assets/theme/et-line-font.min.css" rel="stylesheet">
   
   <!-- Plugins -->
-  <link href="assets/theme/magnific-popup.css" rel="stylesheet">
-  <link href="assets/theme/owl.carousel.css" rel="stylesheet">
-  <link href="assets/theme/superslides.css" rel="stylesheet">
-  <link href="assets/theme/vertical.min.css" rel="stylesheet">
+  <link href="/assets/theme/magnific-popup.css" rel="stylesheet">
+  <link href="/assets/theme/owl.carousel.css" rel="stylesheet">
+  <link href="/assets/theme/superslides.css" rel="stylesheet">
+  <link href="/assets/theme/vertical.min.css" rel="stylesheet">
   
   <!-- Template core CSS -->
-  <link href="assets/theme/template.css" rel="stylesheet">
+  <link href="/assets/theme/template.css" rel="stylesheet">
   
   <%= csrf_meta_tags %>
 
@@ -58,7 +58,7 @@
         </button>
     
         <!-- YOU LOGO HERE -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="<%= root_path %>">
           <!-- IMAGE OR SIMPLE TEXT -->
           <p>J<strong>Tait</strong></p>
         </a>
@@ -85,7 +85,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries</a>
             <ul class="dropdown-menu" role="menu">
               <% @albums.each do |album| %>
-                <li><a href="portfolio-single.html"><%= album.title %></a></li>
+                <li><a href="<%= album_path(album) %>"><%= album.title %></a></li>
               <% end %>
             </ul>
           </li>
@@ -132,209 +132,14 @@
         <a href="#" target="_blank" class="fa fa-dribbble dribbble"></a>
       </div>
     
-      <p>© 2015 Stone Template</p>
+      <p>© 2017 Jonathan Tait</p>
     </div>
     <!-- /SOCIAL LINKS -->
 
   </div>
   <!-- /SIDEBAR -->
 
-  <!-- WRAPPER -->
-  <div class="wrapper">
-
-    <!-- HERO -->
-    <section id="hero" class="module-hero bg-dark-30 js-fullheight" data-background="assets/images/module-4.jpg">
-
-      <!-- HERO TEXT -->
-      <div class="hero-caption">
-        <div class="hero-text">
-          <h1 class="m-b-30">Jonathan Tait</h1>
-          <h6 class="m-b-60">Freelance photographer &amp; cameraman</h6>
-        </div>
-      </div>
-      <!-- /HERO TEXT -->
-
-      <div class="video-player" data-property="{ videoURL: 'https://www.youtube.com/watch?v=9d8wWcJLnFI', containment: '#hero', quality: 'large', startAt: 0, autoPlay: true,loop: true, opacity: 1, showControls: false, showYTLogo: false, vol: 0, mute: true }">
-      </div>
-
-    </section>
-    <!-- /HERO -->
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="module-sm">
-      <div class="container-fluid">
-
-        <!-- FILTERS -->
-        <div class="row">
-          <div class="col-sm-12">
-            <ul id="filters" class="filters font-alt">
-              <li><a href="#" class="current" data-filter="*">All</a></li>
-              <li><a href="#" data-filter=".fashion">Fashion</a></li>
-              <li><a href="#" data-filter=".travel">Travel</a></li>
-              <li><a href="#" data-filter=".music">Music</a></li>
-              <li><a href="#" data-filter=".video">Video</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- /FILTERS -->
-
-        <div class="works-grid-wrapper">
-
-          <div id="works-grid" class="works-grid works-grid-gutter">
-          
-            <% @photos.each do |photo| %>
-              <article class="work-item">
-                <div class="work-wrapper">
-                  <div class="work-thumbnail">
-                    <img src="<%= photo.image_url %>" alt="">
-                  </div>
-                  <div class="work-caption">
-                    <h3 class="work-title font-alt">View Album</h3>
-                  </div>
-                  <a href="portfolio-single-1.html" class="work-link"></a>
-                </div>
-              </article>
-            <% end %>
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item travel video">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-1.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">Montures</h3>
-                  <span class="work-category font-serif"><a href="#">Travel, Video</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item fashion">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-8.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">Rambler & Co</h3>
-                  <span class="work-category font-serif"><a href="#">Fashion</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item music">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-2.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">Pink Lips</h3>
-                  <span class="work-category font-serif"><a href="#">Music</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item fashion">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-3.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">Brother</h3>
-                  <span class="work-category font-serif"><a href="#">Fashion</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item travel">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-4.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">Travel Bags</h3>
-                  <span class="work-category font-serif"><a href="#">Travel</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item music">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-5.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">Workshop</h3>
-                  <span class="work-category font-serif"><a href="#">Music</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item travel">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-6.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">The Handkerchief</h3>
-                  <span class="work-category font-serif"><a href="#">Travel</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-            <!-- PORTFOLIO ITEM -->
-            <article class="work-item fashion">
-              <div class="work-wrapper">
-                <div class="work-thumbnail">
-                  <img src="assets/theme/portfolio-7.jpg" alt="">
-                </div>
-                <div class="work-caption">
-                  <h3 class="work-title font-alt">Architecture</h3>
-                  <span class="work-category font-serif"><a href="#">Fashion</a></span>
-                </div>
-                <a href="portfolio-single-1.html" class="work-link"></a>
-              </div>
-            </article>
-            <!-- /PORTFOLIO ITEM -->
-
-          </div>
-
-        </div><!-- works-grid-wrapper -->
-
-        <!-- SHOW MORE -->
-        <div class="row">
-          <div class="col-sm-12">
-
-            <!-- <div class="m-t-70 text-center">
-              <button id="show-more" class="btn btn-dark show-more">More works</button>
-            </div> -->
-
-          </div>
-        </div>
-        <!-- /SHOW MORE -->
-
-      </div>
-    </section>
-    <!-- /PORTFOLIO -->
+    <%= yield %>
 
     <hr class="divider">
 
@@ -346,12 +151,10 @@
         <div class="row">
           <div class="col-sm-12">
             <ul class="contact-info font-alt">
-              <li><a href="#">themes@domain.com</a></li>
-              <li><a href="#">+(384) 123 4567 891</a></li>
-              <li><a href="#">007 STEET, CITY, USA</a></li>
+              <li><a href="#">taitfilms@gmail.com</a></li>
             </ul>
             <div class="copyright text-center font-alt">
-              © 2015 <a href="#">Stone</a>, All Rights Reserved.
+              © 2017 <a href="#">Jonathan Tait</a>, All Rights Reserved.
             </div>
           </div>
         </div>
@@ -370,21 +173,21 @@
   <!-- /WRAPPER -->
 
   <!-- JAVASCRIPT FILES -->
-  <script src="assets/theme/jquery.superslides.min.js"></script>
-  <script src="assets/theme/jquery.mb.YTPlayer.min.js"></script>
-  <script src="assets/theme/imagesloaded.pkgd.js"></script>
-  <script src="assets/theme/isotope.pkgd.min.js"></script>
-  <script src="assets/theme/jquery.magnific-popup.min.js"></script>
-  <script src="assets/theme/owl.carousel.min.js"></script>
-  <script src="assets/theme/jquery.fitvids.js"></script>
-  <script src="assets/theme/jqBootstrapValidation.js"></script>
+  <script src="/assets/theme/jquery.superslides.min.js"></script>
+  <script src="/assets/theme/jquery.mb.YTPlayer.min.js"></script>
+  <script src="/assets/theme/imagesloaded.pkgd.js"></script>
+  <script src="/assets/theme/isotope.pkgd.min.js"></script>
+  <script src="/assets/theme/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/theme/owl.carousel.min.js"></script>
+  <script src="/assets/theme/jquery.fitvids.js"></script>
+  <script src="/assets/theme/jqBootstrapValidation.js"></script>
   <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script src="assets/theme/gmap3.min.js"></script>
-  <script src="assets/theme/appear.js"></script>
-  <script src="assets/theme/smoothscroll.js"></script>
-  <script src="assets/theme/submenu-fix.js"></script>
-  <script src="assets/theme/contact.js"></script>
-  <script src="assets/theme/custom.js"></script>
+  <script src="/assets/theme/gmap3.min.js"></script>
+  <script src="/assets/theme/appear.js"></script>
+  <script src="/assets/theme/smoothscroll.js"></script>
+  <script src="/assets/theme/submenu-fix.js"></script>
+  <script src="/assets/theme/contact.js"></script>
+  <script src="/assets/theme/custom.js"></script>
 
 </body>
 </html>
