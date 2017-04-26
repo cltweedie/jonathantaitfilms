@@ -36,6 +36,9 @@ gem 'fog'
 gem 'carrierwave', '~> 1.0'
 gem 'pry'
 gem "mini_magick"
+gem 'rails_serve_static_assets'
+gem 'rails_stdout_logging'
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
