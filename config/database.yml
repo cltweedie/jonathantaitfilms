@@ -80,8 +80,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: jonathantaitfilms_production
-  username: jonathantaitfilms
-  password: <%= ENV['JONATHANTAITFILMS_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: jonathantaitfilms_production
+#   username: jonathantaitfilms
+#   password: <%= ENV['JONATHANTAITFILMS_DATABASE_PASSWORD'] %>
