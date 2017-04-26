@@ -9,7 +9,7 @@ class Admin::PhotosController < ApplicationController
   def create
     @album.photos << Photo.new(photo_params)
     @album.save!
-    redirect_to admin_albums_path
+    redirect_to admin_album_photos_path(@album)
   end
   
   def destroy

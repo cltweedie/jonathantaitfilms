@@ -9,6 +9,11 @@ class Admin::AlbumsController < ApplicationController
     redirect_to admin_albums_path
   end
   
+  def destroy
+    Album.find(params[:id]).destroy
+    redirect_to admin_albums_path
+  end
+  
   def album_params
     params.require(:album).permit(:title, :description)
   end
