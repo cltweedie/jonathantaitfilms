@@ -23,6 +23,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
+  # TODO - CHANGE THIS BACK TO FALSE AND FIND BETTER FIX FOR BROKEN ASSETS ON HEROKU!
   config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb

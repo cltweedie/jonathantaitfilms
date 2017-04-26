@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+          sessions: 'users/sessions'
+        }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
   get '/admin', to: 'admin#index'
@@ -9,4 +12,5 @@ Rails.application.routes.draw do
   end
   
   resources :albums
+
 end

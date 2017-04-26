@@ -37,6 +37,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'pry'
 gem "mini_magick"
 gem 'rails_12factor', group: :production
+gem 'devise'
 
 
 source 'https://rails-assets.org' do
