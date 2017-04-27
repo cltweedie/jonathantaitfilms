@@ -1,0 +1,7 @@
+<%= form_for @album, url: url_for(controller: 'albums', action: 'update') do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %><br />
+  <%= f.label :description %>
+  <%= f.text_area :description, class: 'form-control' %><br />
+  <%= f.submit 'Update Album', class: 'btn btn-primary' %>
+<% end %>

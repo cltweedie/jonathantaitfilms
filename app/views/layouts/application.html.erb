@@ -141,6 +141,8 @@
   <!-- /SIDEBAR -->
 
     <%= yield %>
+    
+    <% unless controller_name == 'home' && controller.action_name == 'index' %>
 
     <hr class="divider">
 
@@ -169,6 +171,7 @@
     </footer>
 
     <!-- /FOOTER -->
+    <% end %>
 
   </div>
   <!-- /WRAPPER -->

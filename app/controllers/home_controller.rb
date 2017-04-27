@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
   
   def contact
-    
+    @contact_block = ContentBlock.find_by(title: 'contact')
   end
   
 end
