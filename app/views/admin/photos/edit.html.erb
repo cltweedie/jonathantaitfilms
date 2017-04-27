@@ -6,3 +6,10 @@
   <%= f.hidden_field :image_cache %>
   <%= f.submit 'Save Photo', class: 'btn btn-primary' %>
 <% end %>
+
+<script>
+$(function() {
+  $('.nav-item').removeClass('active');
+  $('.nav-item.nav-galleries-item').addClass('active');
+});
+</script>

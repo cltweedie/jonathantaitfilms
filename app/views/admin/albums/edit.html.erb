@@ -5,3 +5,10 @@
   <%= f.text_area :description, class: 'form-control' %><br />
   <%= f.submit 'Update Album', class: 'btn btn-primary' %>
 <% end %>
+
+<script>
+$(function() {
+  $('.nav-item').removeClass('active');
+  $('.nav-item.nav-galleries-item').addClass('active');
+});
+</script>
