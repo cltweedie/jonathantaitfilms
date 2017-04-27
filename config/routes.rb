@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   root 'home#index'
   
   get '/about', to: 'home#about'
+  get '/contact', to: 'home#contact'
   
   get '/admin', to: 'admin#index'
   namespace 'admin' do
     resources :albums do
       resources :photos
     end
+    resources :content_blocks
   end
   
   resources :albums

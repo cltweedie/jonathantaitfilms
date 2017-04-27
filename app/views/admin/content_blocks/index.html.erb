@@ -1,0 +1,7 @@
+<% @content_blocks.each do |c| %>
+  <%= form_for c, url: admin_content_block_path(c) do |f| %>
+    <h3><%= c.title.capitalize %></h3>
+    <%= f.text_area :content, class: 'form-control' %><br />
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+  <% end %>
+<% end %>
