@@ -17,6 +17,16 @@ class Admin::PhotosController < ApplicationController
     redirect_to admin_album_photos_path(@album)
   end
   
+  def edit
+    @photo = Photo.find(params[:id])
+  end
+  
+  def update
+    @photo = Photo.find(params[:id])
+    @photo.update(photo_params)
+    redirect_to admin_album_photos_path(Album.find(params[:album_id]), @photo)
+  end
+  
   private
   
   def photo_params

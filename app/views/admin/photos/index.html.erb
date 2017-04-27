@@ -13,8 +13,8 @@
       <div class="card-block">
         <h4 class="card-title"><%= photo.title %></h4>
         <p class="card-text"><%= photo.caption %></p>
-        <a href="#" class="btn btn-primary">Edit</a>
-        <%= link_to "Delete", admin_album_photo_path(@album, photo), method: :delete, data: { confirm: 'Are you sure you want to delete this photo?' }, class: 'btn btn-danger' %>
+        <a href="<%= edit_admin_album_photo_path(@album, photo) %>" class="btn btn-outline-primary">Edit</a>
+        <%= link_to "Delete", admin_album_photo_path(@album, photo), method: :delete, data: { confirm: 'Are you sure you want to delete this photo?' }, class: 'btn btn-outline-danger' %>
       </div>
     </div>
   <% end %>

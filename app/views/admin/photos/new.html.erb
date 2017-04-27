@@ -1,15 +1,7 @@
 <%= form_for :photo, url: url_for(controller: 'photos', action: 'create') do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control' %><br />
   <%= f.label :caption %>
   <%= f.text_area :caption, class: 'form-control' %><br />
   <%= f.file_field :image, class: 'form-control' %>
   <%= f.hidden_field :image_cache %>
-  <div class="form-check" style="margin: 30px 5px;">
-    <label class="form-check-label">
-      <%= f.check_box :published, class: 'form-check-input' %>
-      Publish?
-    </label>
-  </div>
   <%= f.submit 'Add Photo', class: 'btn btn-primary' %>
 <% end %>
