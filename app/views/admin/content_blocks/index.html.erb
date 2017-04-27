@@ -1,7 +1,11 @@
 <% @content_blocks.each do |c| %>
   <%= form_for c, url: admin_content_block_path(c) do |f| %>
-    <h3 style="margin-top: 50px;"><%= c.title.capitalize %></h3>
-    <%= f.text_area :content, class: 'form-control' %><br />
+    <h3 style="margin-top: 50px;"><%= c.title.capitalize.gsub('_', ' ') %></h3>
+    <% if c.title != 'homepage_youtube_video' %>
+      <%= f.text_area :content, class: 'form-control' %><br />
+    <% else %>
+      <%= f.text_field :content, class: 'form-control' %><br />
+    <% end %>
     <%= f.submit 'Update', class: 'btn btn-primary' %>
   <% end %>
 <% end %>

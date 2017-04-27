@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   
   def index
+    @homepage_youtube_video = ContentBlock.find_by(title: 'homepage_youtube_video')
     @photos = Photo.all.shuffle.take(20)
   end
   
