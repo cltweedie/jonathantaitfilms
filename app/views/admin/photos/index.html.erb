@@ -1,3 +1,16 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="<%= admin_albums_path %>">Albums</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="<%= edit_admin_album_path(@album) %>"><%= @album.title %></a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="<%= admin_album_photos_path(@album) %>">Photos</a>
+  </li>
+</ol>
+
+
 <h2><%= @album.title %></h2>
 
 <div style="margin: 20px 5px 30px;">

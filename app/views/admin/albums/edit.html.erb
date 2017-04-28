@@ -1,3 +1,12 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="<%= admin_albums_path %>">Albums</a>
+  </li>
+  <li class="breadcrumb-item active">
+    <a href="<%= edit_admin_album_path(@album) %>"><%= @album.title %></a>
+  </li>
+</ol>
+
 <%= form_for @album, url: url_for(controller: 'albums', action: 'update') do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title, class: 'form-control' %><br />

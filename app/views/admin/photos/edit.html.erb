@@ -2,8 +2,6 @@
   <%= image_tag @photo.image.url, data: {style: 'width: 200px;'} %><br/>
   <%= f.label :caption %>
   <%= f.text_area :caption, class: 'form-control' %><br />
-  <%= f.file_field :image, class: 'form-control' %>
-  <%= f.hidden_field :image_cache %>
   <%= f.submit 'Save Photo', class: 'btn btn-primary' %>
 <% end %>
 

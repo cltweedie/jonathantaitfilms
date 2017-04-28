@@ -1,6 +1,8 @@
 class Admin::ContentBlocksController < ApplicationController
   layout 'admin'
   
+  before_action :authenticate_user!
+  
   def index
     @content_blocks = ContentBlock.all
   end
