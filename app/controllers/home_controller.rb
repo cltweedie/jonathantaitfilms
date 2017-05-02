@@ -13,4 +13,8 @@ class HomeController < ApplicationController
     @contact_block = ContentBlock.find_by(title: 'contact')
   end
   
+  def videos
+    @videos = HTTParty.get("https://vimeo.com/api/v2/joanthantaitfilms/videos.json")
+  end
+  
 end

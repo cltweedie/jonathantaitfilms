@@ -1,0 +1,35 @@
+<section class="module">
+  <div class="container-fluid container-custom">
+
+    <div class="row">
+
+      <div class="col-sm-8 col-sm-offset-2">
+
+        <!-- PORTFOLIO CONTENT -->
+        <article class="portfolio-post post">
+
+          <% @videos.each do |video| %>
+            <div class="video-section">
+              <h5><%= video['title'] %></h5>
+              
+              <p style="margin-bottom: 20px;"><%= video['description'].html_safe %></p>
+
+              <iframe src="//player.vimeo.com/video/<%= video['id'] %>?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          <% end %>
+
+        </article>
+        <!-- /PORTFOLIO CONTENT -->
+
+      </div><!-- .col-* -->
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .video-section {
+    margin-bottom: 200px;
+  }
+</style>

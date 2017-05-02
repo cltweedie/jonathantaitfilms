@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -38,7 +39,6 @@ gem 'pry'
 gem "mini_magick"
 gem 'rails_12factor', group: :production
 gem 'devise'
-
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
