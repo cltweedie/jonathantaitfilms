@@ -39,6 +39,7 @@ gem 'pry'
 gem "mini_magick"
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem 'httparty'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
