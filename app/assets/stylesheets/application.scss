@@ -9,15 +9,16 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- */
+*
+*= require theme/bootstrap.min.css
+*= require theme/et-line-font.min.css
+*= require theme/magnific-popup.css
+*= require theme/owl.carousel.css
+*= require theme/superslides.css
+*= require theme/vertical.min.css
+*= require theme/template.css
+*
+*/
 
 @import "font-awesome";
 @import "sb-admin.min";
-@import "theme/bootstrap.min.css";
-@import "theme/et-line-font.min.css";
-@import "theme/magnific-popup.css";
-@import "theme/owl.carousel.css";
-@import "theme/superslides.css";
-@import "theme/vertical.min.css";
-@import "theme/template.css";
