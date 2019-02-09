@@ -15,4 +15,21 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require sb-admin.js
+
+//= require theme/jquery.superslides.min.js
+//= require theme/jquery.mb.YTPlayer.min.js
+//= require theme/jquery.mb.YTPlayer.min.js
+//= require theme/imagesloaded.pkgd.js
+//= require theme/isotope.pkgd.min.js
+//= require theme/jquery.magnific-popup.min.js
+//= require theme/owl.carousel.min.js
+//= require theme/jquery.fitvids.js
+//= require theme/jqBootstrapValidation.js
+//= require theme/gmap3.min.js
+//= require theme/appear.js
+//= require theme/smoothscroll.js
+//= require theme/submenu-fix.js
+//= require theme/contact.js
+//= require theme/custom.js
+
 //= require_tree .
