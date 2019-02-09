@@ -15,6 +15,10 @@ class HomeController < ApplicationController
   
   def videos
     @videos = HTTParty.get("https://vimeo.com/api/v2/joanthantaitfilms/videos.json")
+    respond_to do |format|
+      format.html {}
+      format.json { render json: @videos }
+    end
   end
   
 end
